@@ -1,6 +1,8 @@
+
 #include "grid.h"
 #include "colors.h"
 #include <iostream>
+
 
 using namespace std;
 
@@ -10,7 +12,7 @@ Grid ::Grid() {
   numCols = 10;
   cellSize = 30; // 30
   Initialize();
-  // colors = GetCellColor();
+  colors = getCellColors();
 }
 
 // initialize method
@@ -41,7 +43,8 @@ void Grid::Draw() {
   for (int row = 0; row < numRows; row++) {
     for (int colum = 0; colum < numCols; colum++) {
       int cellValue = grid[row][colum];
-      DrawRectangle(colum * cellSize + 1, row * cellSize + 1, cellSize - 1,cellSize - 1, colors[cellValue]);
+      DrawRectangle(colum * cellSize + 1, row * cellSize + 1, cellSize - 1,
+                    cellSize - 1, colors[cellValue]);
     }
   }
 }

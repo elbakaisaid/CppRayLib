@@ -10,7 +10,7 @@ private:
     int numRows;
     int numCols;
     int cellSize;
-    //vector<Color> colors;
+    vector<Color> colors;
 
 public:
     Grid();
